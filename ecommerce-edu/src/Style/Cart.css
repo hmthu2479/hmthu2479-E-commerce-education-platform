@@ -1,0 +1,30 @@
+.cart-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cart-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.5);
+}
+.cart-panel {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.cart-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cart-item {
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}

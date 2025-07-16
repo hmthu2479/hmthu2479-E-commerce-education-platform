@@ -1,0 +1,16 @@
+body {
+    margin:0;
+}
+/* styles/globals.css */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* Tailwind gray-300 */
+  border-radius: 99999px;
+}

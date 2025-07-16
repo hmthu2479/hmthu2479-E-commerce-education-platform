@@ -1,0 +1,134 @@
+#product-card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 6;
+  max-width: clamp(220px, 30vw, 305px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+.product-image {
+  flex-grow: 1;
+  min-height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#product-card:hover {
+  transform: translateY(-4px);
+}
+
+.btn-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 35px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.btn-wishlist svg {
+  fill: #ccc;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.btn-wishlist.favorited svg {
+  fill: red;
+  transform: scale(1.2);
+}
+
+/* Luôn hiện base info */
+.base-info {
+  padding: 12px 20px;
+  text-align: left;
+  background-color: #fff;
+}
+
+.product_name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.product_author {
+  color: #777;
+  font-size: 14px;
+}
+
+.product_price {
+  color: #14b24c;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product_description {
+  font-size: 15px;
+  line-height: 1.5;
+  max-height: 3.6em; /* 3 dòng * 1.2em (line-height) */
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Scrollbar style cho Webkit (Chrome, Edge, Safari) */
+.modal-scroll::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd; /* màu xám nhạt */
+  border-radius: 10px;
+}
+
+/* Firefox */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd transparent;
+}
+
+.modal-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.modal-content {
+  padding: 24px;
+}

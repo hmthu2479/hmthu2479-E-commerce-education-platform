@@ -1,0 +1,98 @@
+.hero-banner {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(80, 200, 120, 0.88), rgba(43, 182, 115, 0.88)),
+    url('../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px 20px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 3px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-icon-left {
+  color: #999;
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 18px;
+  padding: 10px 5px;
+  color: #333;
+}
+
+.search-btn {
+  background-color: #38b26c;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.search-btn:hover {
+  background-color: #2a975b;
+}
+
+.suggestion-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+
+.suggestion-chip {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  transition: none;
+  cursor: pointer;
+}
+
+.suggestion-chip:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    flex-direction: row;
+    padding: 8px 16px;
+  }
+
+  .suggestion-chip {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}

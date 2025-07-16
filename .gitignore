@@ -1,0 +1,34 @@
+# =========================
+# 🌐 Frontend: ecommerce-edu
+# =========================
+
+ecommerce-edu/node_modules/
+ecommerce-edu/dist/
+ecommerce-edu/.env
+ecommerce-edu/.env.local
+ecommerce-edu/.env.development.local
+ecommerce-edu/.env.test.local
+ecommerce-edu/.env.production.local
+ecommerce-edu/.vscode/
+ecommerce-edu/.idea/
+ecommerce-edu/npm-debug.log*
+ecommerce-edu/yarn-debug.log*
+ecommerce-edu/yarn-error.log*
+ecommerce-edu/.DS_Store
+ecommerce-edu/Thumbs.db
+
+# =========================
+# 🔧 Backend: mock-express-api
+# =========================
+
+mock-express-api/node_modules/
+mock-express-api/.env
+mock-express-api/logs/
+mock-express-api/*.log
+mock-express-api/npm-debug.log*
+mock-express-api/yarn-debug.log*
+mock-express-api/yarn-error.log*
+mock-express-api/.vscode/
+mock-express-api/.idea/
+mock-express-api/.DS_Store
+mock-express-api/Thumbs.db

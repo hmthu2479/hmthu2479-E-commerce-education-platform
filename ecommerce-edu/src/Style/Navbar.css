@@ -1,0 +1,78 @@
+.header-bar {
+  background-color: white;
+  color: black;
+  box-shadow: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+.nav-button {
+  color: black;
+}
+
+.active-link .nav-button {
+  color: green;
+  font-weight: bold;
+  border-bottom: 2px solid green;
+}
+
+.logo {
+  height: 32px;
+}
+
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.nav-button {
+  font-weight: 500;
+  color: black;
+  text-transform: none;
+  font-size: 0.95rem;
+}
+
+.trial-button {
+  margin-right: 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.login-button {
+  color: black;
+  margin-right: 8px;
+  text-transform: none;
+  font-size: 0.95rem;
+}
+
+.language-button {
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .trial-button {
+    display: none;
+  }
+}

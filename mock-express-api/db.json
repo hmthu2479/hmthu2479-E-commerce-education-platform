@@ -1,0 +1,717 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "IELTS Chiến Lược 6 Tuần",
+      "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+      "price": 899000,
+      "discountPercent": 20,
+      "image": "https://img.freepik.com/premium-vector/cute-book-herbarium-journal-literature-world-book-day-vector-illustration-flat-style_254685-2882.jpg?semt=ais_hybrid&w=740",
+      "author": "Giáo viên A",
+      "description": "Khóa học luyện thi IELTS trong 6 tuần, phù hợp cho người có nền tảng cơ bản muốn đạt 6.5+ nhanh chóng. Bao gồm bài giảng, đề luyện tập, và hỗ trợ chấm bài viết hàng tuần.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        101,
+        102
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Bộ Đề TOEIC Tối Đa 990",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "price": 199000,
+      "discountPercent": 30,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_G4i8eBx4KVheUN4u8eeb0bmZS1NnFQY0dg&s",
+      "author": "Tác giả B",
+      "description": "Tài liệu luyện thi TOEIC chuyên sâu giúp đạt điểm tối đa. Gồm 10 đề thi thử, mẹo làm bài, và từ vựng chuyên biệt theo từng chủ đề thường gặp trong đề thi.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        103,
+        104
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Giao Tiếp Cơ Bản Cho Người Mất Gốc",
+      "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+      "price": 599000,
+      "discountPercent": 15,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIZtQvZaCGh0HGFGP3VKouJcpEPtymUqLDQ&s",
+      "author": "Giáo viên C",
+      "description": "Khóa học giao tiếp cơ bản cho người mất gốc. Học qua tình huống thực tế, video minh họa và bài tập tương tác. Giúp bạn tự tin nói chuyện hàng ngày sau 3 tháng.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        105
+      ]
+    },
+    {
+      "id": 4,
+      "title": "IELTS Format 2024 Tăng Tốc",
+      "avatar": "https://randomuser.me/api/portraits/men/46.jpg",
+      "price": 899000,
+      "discountPercent": 10,
+      "image": "https://img.freepik.com/premium-vector/cute-book-herbarium-journal-literature-world-book-day-vector-illustration-flat-style_254685-2882.jpg?semt=ais_hybrid&w=740",
+      "author": "Giáo viên A",
+      "description": "Phiên bản cập nhật mới nhất của khóa học IELTS với nội dung được biên soạn lại theo format đề thi 2024. Có bài chấm writing mỗi tuần và feedback chi tiết.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        106
+      ]
+    },
+    {
+      "id": 5,
+      "title": "TOEIC Master Từ 700+ Đến 990",
+      "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
+      "price": 199000,
+      "discountPercent": 40,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_G4i8eBx4KVheUN4u8eeb0bmZS1NnFQY0dg&s",
+      "author": "Tác giả B",
+      "description": "Cuốn sách tổng hợp tất cả mẹo làm bài, chiến thuật xử lý các dạng đề khó. Phù hợp với người học đang ở trình độ 700+ muốn nâng điểm vượt trội trong thời gian ngắn.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        107
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Giao Tiếp Thực Tế Mỗi Ngày",
+      "avatar": "https://randomuser.me/api/portraits/men/41.jpg",
+      "price": 599000,
+      "discountPercent": 25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIZtQvZaCGh0HGFGP3VKouJcpEPtymUqLDQ&s",
+      "author": "Giáo viên C",
+      "description": "Học qua hội thoại mô phỏng thực tế, luyện nghe nói mỗi ngày với giáo viên. Bài học chia theo chủ đề như: chào hỏi, gọi món, hỏi đường... giúp bạn giao tiếp linh hoạt.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        108
+      ]
+    },
+    {
+      "id": 7,
+      "title": "IELTS Speaking Tự Tin 7.0+",
+      "avatar": "https://randomuser.me/api/portraits/men/34.jpg",
+      "price": 499000,
+      "discountPercent": 25,
+      "image": "https://img.freepik.com/premium-photo/stack-books-library-blurred-bookshelf-background_94064-1045.jpg?w=740",
+      "author": "Giáo viên D",
+      "description": "Chuyên sâu kỹ năng Speaking, giúp học viên luyện phản xạ, phát âm và tư duy ý tưởng nhanh chóng.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        109
+      ]
+    },
+    {
+      "id": 8,
+      "title": "TOEIC Listening 500+ Trong 2 Tuần",
+      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
+      "price": 249000,
+      "discountPercent": 20,
+      "image": "https://img.freepik.com/free-photo/open-book-library_1150-17427.jpg?w=740",
+      "author": "Tác giả C",
+      "description": "Lộ trình luyện kỹ năng nghe TOEIC giúp cải thiện điểm rõ rệt sau 2 tuần tập trung.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        110
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Ngữ Pháp Cơ Bản Tiếng Anh",
+      "avatar": "https://randomuser.me/api/portraits/men/59.jpg",
+      "price": 149000,
+      "discountPercent": 10,
+      "image": "https://img.freepik.com/free-photo/english-book-wooden-table_1150-17840.jpg?w=740",
+      "author": "Tác giả D",
+      "description": "Tài liệu tổng hợp những điểm ngữ pháp thiết yếu nhất cho người mới học.",
+      "category": [
+        "sách",
+        "Ngữ pháp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        111
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Giao Tiếp Công Sở",
+      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "price": 599000,
+      "discountPercent": 30,
+      "image": "https://img.freepik.com/premium-photo/english-course-language-school-learning-education_31965-102121.jpg?w=740",
+      "author": "Giáo viên E",
+      "description": "Khóa học chuyên về giao tiếp môi trường công sở, từ viết email đến hội thoại nhóm.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": []
+    },
+    {
+      "id": 11,
+      "title": "Tự Học IELTS Reading",
+      "avatar": "https://randomuser.me/api/portraits/women/77.jpg",
+      "price": 299000,
+      "discountPercent": 35,
+      "image": "https://img.freepik.com/free-photo/close-up-stack-books-library_1150-18792.jpg?w=740",
+      "author": "Tác giả E",
+      "description": "Sách tự học kỹ năng đọc hiểu theo từng dạng bài hay gặp nhất trong đề IELTS.",
+      "category": [
+        "sách",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        112
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Thuyết Trình Tiếng Anh Cho Người Bắt Đầu",
+      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+      "price": 499000,
+      "discountPercent": 20,
+      "image": "https://img.freepik.com/free-photo/learning-english-language_1150-17843.jpg?w=740",
+      "author": "Giáo viên F",
+      "description": "Khóa học rèn kỹ năng trình bày trước đám đông bằng tiếng Anh một cách tự tin.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        113
+      ]
+    },
+    {
+      "id": 13,
+      "title": "TOEIC Vocabulary Theo Chủ Đề",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "price": 199000,
+      "discountPercent": 15,
+      "image": "https://img.freepik.com/premium-photo/english-school-desk-learning-language-education_31965-63398.jpg?w=740",
+      "author": "Tác giả F",
+      "description": "Học từ vựng TOEIC theo nhóm chủ đề thường gặp, kèm bài tập áp dụng.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": []
+    },
+    {
+      "id": 14,
+      "title": "Luyện Viết IELTS Task 1",
+      "avatar": "https://randomuser.me/api/portraits/men/47.jpg",
+      "price": 399000,
+      "discountPercent": 10,
+      "image": "https://img.freepik.com/free-photo/stack-books-table_1150-18675.jpg?w=740",
+      "author": "Giáo viên G",
+      "description": "Giúp bạn luyện kỹ năng viết mô tả biểu đồ và số liệu chính xác, logic.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        114
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Cấu Trúc Câu Nâng Cao Trong Tiếng Anh",
+      "avatar": "https://randomuser.me/api/portraits/women/51.jpg",
+      "price": 179000,
+      "discountPercent": 20,
+      "image": "https://img.freepik.com/free-photo/english-book-study_1150-17839.jpg?w=740",
+      "author": "Tác giả G",
+      "description": "Tài liệu chuyên về các cấu trúc câu nâng cao, giúp bài viết trở nên chuyên nghiệp hơn.",
+      "category": [
+        "sách",
+        "Ngữ pháp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": []
+    },
+    {
+      "id": 16,
+      "title": "Phát Âm Chuẩn Mỹ",
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg",
+      "price": 499000,
+      "discountPercent": 30,
+      "image": "https://img.freepik.com/free-photo/study-english-concept_1150-17413.jpg?w=740",
+      "author": "Giáo viên H",
+      "description": "Khóa học luyện phát âm kiểu Mỹ, chuẩn IPA, qua đoạn hội thoại thực tế.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        115
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Viết Email Chuẩn Mực Trong Công Việc",
+      "avatar": "https://randomuser.me/api/portraits/women/78.jpg",
+      "price": 299000,
+      "discountPercent": 25,
+      "image": "https://img.freepik.com/free-photo/open-book-desk_1150-17376.jpg?w=740",
+      "author": "Tác giả H",
+      "description": "Hướng dẫn từng bước viết email tiếng Anh chuyên nghiệp theo từng mục đích.",
+      "category": [
+        "sách",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": []
+    },
+    {
+      "id": 18,
+      "title": "IELTS Writing Task 2 Phân Tích Đề",
+      "avatar": "https://randomuser.me/api/portraits/men/55.jpg",
+      "price": 399000,
+      "discountPercent": 15,
+      "image": "https://img.freepik.com/free-photo/english-book-library_1150-17841.jpg?w=740",
+      "author": "Giáo viên I",
+      "description": "Học cách phân tích yêu cầu đề Task 2 và lập dàn ý hiệu quả.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        116
+      ]
+    }
+  ],
+  "rating": [
+    {
+      "id": 101,
+      "productId": 1,
+      "name": "Lan Nguyễn",
+      "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
+      "content": "Giáo trình dễ hiểu và bài tập hữu ích, mình lên trình rõ sau 3 tuần.",
+      "stars": 4,
+      "date": "2025-06-14"
+    },
+    {
+      "id": 102,
+      "productId": 1,
+      "name": "Hoàng Trí",
+      "avatar": "https://randomuser.me/api/portraits/men/71.jpg",
+      "content": "Có thêm phần giải thích kỹ hơn thì sẽ tuyệt.",
+      "stars": 3,
+      "date": "2025-06-28"
+    },
+    {
+      "id": 103,
+      "productId": 2,
+      "name": "Mai Linh",
+      "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+      "content": "Đề luyện sát với thực tế, điểm mình lên đáng kể.",
+      "stars": 5,
+      "date": "2025-07-03"
+    },
+    {
+      "id": 104,
+      "productId": 2,
+      "name": "Quốc Bảo",
+      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+      "content": "Có mẹo làm bài rất hiệu quả, đọc là hiểu liền.",
+      "stars": 5,
+      "date": "2025-06-22"
+    },
+    {
+      "id": 105,
+      "productId": 3,
+      "name": "Minh Châu",
+      "avatar": "https://randomuser.me/api/portraits/women/75.jpg",
+      "content": "Khá ổn cho người mất gốc nhưng tốc độ hơi nhanh.",
+      "stars": 2,
+      "date": "2025-05-30"
+    },
+    {
+      "id": 106,
+      "productId": 4,
+      "name": "Lê Khoa",
+      "avatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "content": "Nội dung được cập nhật đúng format mới, đáng tiền!",
+      "stars": 3,
+      "date": "2025-07-08"
+    },
+    {
+      "id": 107,
+      "productId": 5,
+      "name": "Yến Trâm",
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "content": "Phù hợp với người muốn thi điểm cao, không lan man.",
+      "stars": 5,
+      "date": "2025-06-04"
+    },
+    {
+      "id": 108,
+      "productId": 6,
+      "name": "Hải Đăng",
+      "avatar": "https://randomuser.me/api/portraits/men/38.jpg",
+      "content": "Bài học cơ bản nhưng chưa có phần phản hồi từ giáo viên.",
+      "stars": 1,
+      "date": "2025-05-19"
+    },
+    {
+      "id": 109,
+      "productId": 7,
+      "name": "Phương Minh",
+      "avatar": "https://randomuser.me/api/portraits/women/41.jpg",
+      "content": "Luyện phản xạ nói rất hiệu quả, giờ mình không còn sợ Speaking nữa.",
+      "stars": 4,
+      "date": "2025-06-15"
+    },
+    {
+      "id": 110,
+      "productId": 8,
+      "name": "Trọng Tín",
+      "avatar": "https://randomuser.me/api/portraits/men/62.jpg",
+      "content": "Đề nghe rõ, sát thực tế, tiến bộ rõ rệt sau 1 tuần.",
+      "stars": 5,
+      "date": "2025-07-01"
+    },
+    {
+      "id": 111,
+      "productId": 9,
+      "name": "Bích Hạnh",
+      "avatar": "https://randomuser.me/api/portraits/women/36.jpg",
+      "content": "Giải thích dễ hiểu, có ví dụ minh họa. Rất phù hợp cho người mới.",
+      "stars": 5,
+      "date": "2025-06-26"
+    },
+    {
+      "id": 112,
+      "productId": 11,
+      "name": "Thế Long",
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+      "content": "Chia dạng bài rõ ràng, sách trình bày gọn gàng dễ theo dõi.",
+      "stars": 4,
+      "date": "2025-06-30"
+    },
+    {
+      "id": 113,
+      "productId": 12,
+      "name": "Linh Đan",
+      "avatar": "https://randomuser.me/api/portraits/women/49.jpg",
+      "content": "Rất hữu ích cho người chưa từng thuyết trình, hướng dẫn cụ thể.",
+      "stars": 5,
+      "date": "2025-07-10"
+    },
+    {
+      "id": 114,
+      "productId": 14,
+      "name": "Tuấn Đạt",
+      "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+      "content": "Có bài mẫu minh họa rõ, giảng viên sửa bài chi tiết.",
+      "stars": 4,
+      "date": "2025-07-05"
+    },
+    {
+      "id": 115,
+      "productId": 16,
+      "name": "Tú Vy",
+      "avatar": "https://randomuser.me/api/portraits/women/56.jpg",
+      "content": "Phát âm Mỹ chuẩn, có bài luyện mỗi ngày giúp cải thiện rõ.",
+      "stars": 5,
+      "date": "2025-07-02"
+    },
+    {
+      "id": 116,
+      "productId": 18,
+      "name": "Chí Công",
+      "avatar": "https://randomuser.me/api/portraits/men/44.jpg",
+      "content": "Học được cách phân tích đề hiệu quả, không bị lạc ý khi viết.",
+      "stars": 4,
+      "date": "2025-07-07"
+    }
+  ],
+  "items": [
+    {
+      "id": 6,
+      "title": "Giao Tiếp Thực Tế Mỗi Ngày",
+      "avatar": "https://randomuser.me/api/portraits/men/41.jpg",
+      "price": 599000,
+      "discountPercent": 25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIZtQvZaCGh0HGFGP3VKouJcpEPtymUqLDQ&s",
+      "author": "Giáo viên C",
+      "description": "Học qua hội thoại mô phỏng thực tế, luyện nghe nói mỗi ngày với giáo viên. Bài học chia theo chủ đề như: chào hỏi, gọi món, hỏi đường... giúp bạn giao tiếp linh hoạt.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        108
+      ],
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 17,
+      "itemId": 6
+    },
+    {
+      "id": 5,
+      "title": "TOEIC Master Từ 700+ Đến 990",
+      "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
+      "price": 199000,
+      "discountPercent": 40,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_G4i8eBx4KVheUN4u8eeb0bmZS1NnFQY0dg&s",
+      "author": "Tác giả B",
+      "description": "Cuốn sách tổng hợp tất cả mẹo làm bài, chiến thuật xử lý các dạng đề khó. Phù hợp với người học đang ở trình độ 700+ muốn nâng điểm vượt trội trong thời gian ngắn.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        107
+      ],
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 7,
+      "itemId": 5
+    },
+    {
+      "id": 2,
+      "title": "Bộ Đề TOEIC Tối Đa 990",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "price": 199000,
+      "discountPercent": 30,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_G4i8eBx4KVheUN4u8eeb0bmZS1NnFQY0dg&s",
+      "author": "Tác giả B",
+      "description": "Tài liệu luyện thi TOEIC chuyên sâu giúp đạt điểm tối đa. Gồm 10 đề thi thử, mẹo làm bài, và từ vựng chuyên biệt theo từng chủ đề thường gặp trong đề thi.",
+      "category": [
+        "sách",
+        "TOEIC"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        103,
+        104
+      ],
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 3,
+      "itemId": 2
+    },
+    {
+      "id": 4,
+      "title": "IELTS Format 2024 Tăng Tốc",
+      "avatar": "https://randomuser.me/api/portraits/men/46.jpg",
+      "price": 899000,
+      "discountPercent": 10,
+      "image": "https://img.freepik.com/premium-vector/cute-book-herbarium-journal-literature-world-book-day-vector-illustration-flat-style_254685-2882.jpg?semt=ais_hybrid&w=740",
+      "author": "Giáo viên A",
+      "description": "Phiên bản cập nhật mới nhất của khóa học IELTS với nội dung được biên soạn lại theo format đề thi 2024. Có bài chấm writing mỗi tuần và feedback chi tiết.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [
+        106
+      ],
+      "itemId": 4,
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "title": "Giao Tiếp Công Sở",
+      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "price": 599000,
+      "discountPercent": 30,
+      "image": "https://img.freepik.com/premium-photo/english-course-language-school-learning-education_31965-102121.jpg?w=740",
+      "author": "Giáo viên E",
+      "description": "Khóa học chuyên về giao tiếp môi trường công sở, từ viết email đến hội thoại nhóm.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": true,
+      "ratingIds": [],
+      "itemId": 10,
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 1
+    },
+    {
+      "id": 1,
+      "title": "IELTS Chiến Lược 6 Tuần",
+      "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+      "price": 899000,
+      "discountPercent": 20,
+      "image": "https://img.freepik.com/premium-vector/cute-book-herbarium-journal-literature-world-book-day-vector-illustration-flat-style_254685-2882.jpg?semt=ais_hybrid&w=740",
+      "author": "Giáo viên A",
+      "description": "Khóa học luyện thi IELTS trong 6 tuần, phù hợp cho người có nền tảng cơ bản muốn đạt 6.5+ nhanh chóng. Bao gồm bài giảng, đề luyện tập, và hỗ trợ chấm bài viết hàng tuần.",
+      "category": [
+        "khóa học",
+        "IELTS"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        101,
+        102
+      ],
+      "itemId": 1,
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "title": "Giao Tiếp Cơ Bản Cho Người Mất Gốc",
+      "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+      "price": 599000,
+      "discountPercent": 15,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIZtQvZaCGh0HGFGP3VKouJcpEPtymUqLDQ&s",
+      "author": "Giáo viên C",
+      "description": "Khóa học giao tiếp cơ bản cho người mất gốc. Học qua tình huống thực tế, video minh họa và bài tập tương tác. Giúp bạn tự tin nói chuyện hàng ngày sau 3 tháng.",
+      "category": [
+        "khóa học",
+        "Giao tiếp"
+      ],
+      "isFavorite": false,
+      "isSeen": false,
+      "ratingIds": [
+        105
+      ],
+      "itemId": 3,
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "quantity": 1
+    }
+  ],
+  "favourites": [
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 1
+    },
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 10
+    }
+  ],
+  "histories": [
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 5
+    },
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 4
+    },
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 10
+    },
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "productId": 14
+    }
+  ],
+  "suggestions": [
+    {
+      "userId": "f4a46c08-b1c2-4ea5-88ad-fdd1380a5b80",
+      "words": [
+        {
+          "word": "ielts",
+          "count": 2
+        },
+        {
+          "word": "990",
+          "count": 1
+        },
+        {
+          "word": "2024",
+          "count": 1
+        },
+        {
+          "word": "toeic",
+          "count": 1
+        },
+        {
+          "word": "master",
+          "count": 1
+        },
+        {
+          "word": "700+",
+          "count": 1
+        },
+        {
+          "word": "đến",
+          "count": 1
+        },
+        {
+          "word": "format",
+          "count": 1
+        },
+        {
+          "word": "tăng",
+          "count": 1
+        },
+        {
+          "word": "tốc",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
