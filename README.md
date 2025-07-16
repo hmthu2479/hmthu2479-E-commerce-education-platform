@@ -63,7 +63,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -139,7 +139,7 @@ cd ../mock-express-api
 npm run dev
 ```
 
-Truy cập: [http://localhost:3001/api/products](http://localhost:3001/api/products)
+Truy cập: [http://localhost:3000/api/products](http://localhost:3000/api/products)
 
 ---
 
