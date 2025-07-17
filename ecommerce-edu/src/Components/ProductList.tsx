@@ -17,11 +17,7 @@ const ProductList = ({ currentPage, products, setCurrentPage }: Props) => {
     <Box display="flex" justifyContent="center" flexDirection="column">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
         {products.map((product, index) => (
-          <ProductCard
-            key={product.id}
-            {...product}
-            index={index}
-          />
+          <ProductCard key={product.id} {...product} index={index} />
         ))}
       </div>
 
@@ -29,8 +25,22 @@ const ProductList = ({ currentPage, products, setCurrentPage }: Props) => {
         count={totalPages}
         page={currentPage}
         onChange={(_e, page) => setCurrentPage(page)}
-        color="success"
-        sx={{ marginLeft: "auto", marginRight: "auto", marginTop: "20px",color:"" }}
+        sx={{
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginTop: "20px",
+          "& .MuiPaginationItem-root": {
+            color: "green", // màu chữ của item
+            borderColor: "green", // viền
+          },
+          "& .Mui-selected": {
+            backgroundColor: "green", // nền item được chọn
+            color: "white", // chữ trắng
+          },
+          "& .MuiPaginationItem-root:hover": {
+            backgroundColor: "#a5d6a7", // xanh nhạt khi hover
+          },
+        }}
       />
     </Box>
   );
