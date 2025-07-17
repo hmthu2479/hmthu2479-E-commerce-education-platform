@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import ProducList from "./Pages/ProductListPage";
 import Navbar from "./Components/Navbar";
 import FavoritePage from "./Pages/FavouritePage";
@@ -36,6 +36,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Navigate to="/books-courses" replace />} />
         <Route path="/books-courses" element={<ProducList />} />
         <Route path="/favorite" element={<FavoritePage />} />
       </Routes>
