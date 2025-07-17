@@ -24,6 +24,6 @@ app.use("/api/rating", ratingRoutes);
 app.use("/api/suggestion", suggestionRoutes);
 app.use("/api/history", historyRoutes);
 
-app.listen(PORT, () => {
-  console.log(`✅ API server running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
