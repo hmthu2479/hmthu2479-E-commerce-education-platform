@@ -15,7 +15,10 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
-
+// Root route
+app.get("/", (req, res) => {
+  res.send("Mock API is running ✅");
+});
 // Route riêng biệt
 app.use("/api/cart", cartRoutes);
 app.use("/api/favourite", favouriteRoutes);
