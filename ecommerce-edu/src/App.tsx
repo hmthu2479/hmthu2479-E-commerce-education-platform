@@ -36,8 +36,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate to="/books-courses" replace />} />
-        <Route path="/books-courses" element={<ProducList />} />
+        <Route path="/" element={<ProducList />} />
         <Route path="/favorite" element={<FavoritePage />} />
       </Routes>
       <Cart />
