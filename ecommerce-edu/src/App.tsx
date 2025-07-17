@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProducList from "./Pages/ProductListPage";
 import Navbar from "./Components/Navbar";
 import FavoritePage from "./Pages/FavouritePage";
