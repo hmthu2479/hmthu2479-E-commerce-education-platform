@@ -1,4 +1,5 @@
 import { useProductDetailModal } from "../hooks/useProductDetailModal";
+import { useHistoryStore } from "../Store/useHistoryStore";
 import { useProductStore } from "../Store/useProductStore";
 import ProductModal from "./ProductModal";
 
@@ -7,10 +8,13 @@ interface ProductSuggestionsProps {
 }
 
 export const ProductSuggestions = ({ productIds }: ProductSuggestionsProps) => {
+  const addToHistory = useHistoryStore((s) => s.addToHistory);
   const { open, handleOpen, handleClose, selectedProduct } =
     useProductDetailModal();
   const { allProducts } = useProductStore();
-  const productSuggestions = allProducts.filter((p) => productIds.includes(p.id));
+  const productSuggestions = allProducts.filter((p) =>
+    productIds.includes(p.id)
+  );
   return (
     <section>
       <div className="p-9 mx-auto bg-gray-50">
@@ -24,7 +28,10 @@ export const ProductSuggestions = ({ productIds }: ProductSuggestionsProps) => {
               key={product.id}
               className={`group cursor-pointer animate-float-up transition-transform duration-500 hover:-translate-y-2 hover:rotate-1 bg-white shadow-xl rounded-2xl p-4 relative overflow-hidden`}
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleOpen(product)}
+              onClick={() => {
+                handleOpen(product);
+                addToHistory(product.id);
+              }}
             >
               {/* background gradient bubble */}
               <div className="absolute -top-5 -right-5 w-20 h-20 bg-gradient-to-br from-yellow-200 to-lime-300 rounded-full opacity-20 blur-2xl z-0" />

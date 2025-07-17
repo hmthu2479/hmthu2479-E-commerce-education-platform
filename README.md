@@ -1,6 +1,6 @@
-# 🛒 Ecommerce EDU - React + Vite + TypeScript + ExpressJS
+# 🛒 Ecommerce EDU - React + Vite + TypeScript + ExpressJS + MongoDB
 
-Dự án mẫu ứng dụng thương mại điện tử sử dụng React, Vite, TypeScript, MUI, TailwindCSS, Zustand, React Router và ExpressJS cho mock API.
+Ứng dụng thương mại điện tử mẫu dùng React, TypeScript, MUI, TailwindCSS, Zustand, React Router, và ExpressJS + MongoDB cho backend mock API.
 
 ---
 
@@ -15,6 +15,8 @@ npm install
 npm run dev
 ```
 
+---
+
 ### 2. Cài đặt UI Frameworks và thư viện hỗ trợ
 
 ```bash
@@ -23,9 +25,6 @@ npm install @mui/material @emotion/react @emotion/styled
 
 # Icon MUI
 npm install @mui/icons-material
-
-# MUI Joy UI (tuỳ chọn)
-npm install @mui/joy @emotion/react @emotion/styled
 
 # TailwindCSS
 npm install tailwindcss
@@ -36,10 +35,10 @@ npm install react-router-dom axios zustand
 
 ---
 
-### 3. Khởi tạo mock API với ExpressJS
+### 3. Tạo backend mock API với ExpressJS + MongoDB
 
 ```bash
-# Di chuyển ra ngoài thư mục ecommerce-edu
+# Di chuyển ra ngoài thư mục frontend
 cd ..
 mkdir mock-express-api
 cd mock-express-api
@@ -47,70 +46,83 @@ cd mock-express-api
 # Khởi tạo NodeJS project
 npm init -y
 
-# Cài đặt Express và các middleware
-npm install express body-parser cors
+# Cài đặt Express, MongoDB và middleware
+npm install express mongoose cors body-parser
 
-# Cài đặt nodemon để tự động reload server
+# Cài nodemon cho dev
 npm install --save-dev nodemon
 ```
 
-Tạo file `server.js`:
+---
+
+### 4. Cấu hình MongoDB
+
+* Tạo file `.env`:
+
+```env
+MONGO_URI=mongodb+srv://...
+PORT=3000
+```
+
+* Tạo file `db.js`:
 
 ```js
-// server.js
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("✅ MongoDB connected");
+  } catch (err) {
+    console.error("❌ MongoDB connection error:", err);
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;
+```
+
+---
+
+### 5. Tạo file `server.js`
+
+```js
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const connectDB = require("./db");
+
+const productRoutes = require("./routes/products");
+const ratingRoutes = require("./routes/rating");
+const favoriteRoutes = require("./routes/favourite");
+const historyRoutes = require("./routes/history");
 
 const app = express();
-const PORT = 3000;
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
+
+connectDB();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/api/products", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      title: "IELTS Chiến Lược 6 Tuần",
-      avatar: "https://randomuser.me/api/portraits/women/45.jpg",
-      price: 899000,
-      discountPercent: 20,
-      image:
-        "https://img.freepik.com/premium-vector/cute-book-herbarium-journal-literature-world-book-day-vector-illustration-flat-style_254685-2882.jpg?semt=ais_hybrid&w=740",
-      author: "Giáo viên A",
-      description:
-        "Khóa học luyện thi IELTS trong 6 tuần, phù hợp cho người có nền tảng cơ bản muốn đạt 6.5+ nhanh chóng. Bao gồm bài giảng, đề luyện tập, và hỗ trợ chấm bài viết hàng tuần.",
-      category: ["khóa học", "IELTS"],
-      isFavorite: false,
-      isSeen: false,
-      ratingIds: [101, 102],
-    },
-    {
-      id: 2,
-      title: "Bộ Đề TOEIC Tối Đa 990",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      price: 199000,
-      discountPercent: 30,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_G4i8eBx4KVheUN4u8eeb0bmZS1NnFQY0dg&s",
-      author: "Tác giả B",
-      description:
-        "Tài liệu luyện thi TOEIC chuyên sâu giúp đạt điểm tối đa. Gồm 10 đề thi thử, mẹo làm bài, và từ vựng chuyên biệt theo từng chủ đề thường gặp trong đề thi.",
-      category: ["sách", "TOEIC"],
-      isFavorite: false,
-      isSeen: false,
-      ratingIds: [103, 104],
-    }
-  ]);
-});
+// Routes
+app.use("/api/products", productRoutes);
+app.use("/api/rating", ratingRoutes);
+app.use("/api/favourite", favoriteRoutes);
+app.use("/api/history", historyRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Mock API running at http://localhost:${PORT}`);
+  console.log(`🚀 Mock API running at http://localhost:${PORT}`);
 });
 ```
 
-Thêm script vào `package.json`:
+---
+
+### 6. Thêm script vào `package.json`
 
 ```json
 "scripts": {
@@ -121,9 +133,39 @@ Thêm script vào `package.json`:
 
 ---
 
+## 🧱 MongoDB Models
+
+* `/models/product.js`
+* `/models/rating.js`
+* `/models/favorite.js`
+* `/models/cart.js`
+* `/models/suggestion.js`
+* `/models/history.js`
+
+Mỗi file sử dụng `mongoose.Schema`, ví dụ:
+
+```js
+// models/rating.js
+const mongoose = require("mongoose");
+
+const ratingSchema = new mongoose.Schema({
+  id: { type: Number, unique: true, required: true },
+  name: String,
+  avatar: String,
+  content: String,
+  stars: { type: Number, min: 1, max: 5 },
+  date: String,
+  productId: Number,
+});
+
+module.exports = mongoose.model("Rating", ratingSchema);
+```
+
+---
+
 ## 🏃‍♂️ Chạy dự án
 
-### Chạy frontend (React + Vite)
+### 1. Chạy frontend (React)
 
 ```bash
 cd ecommerce-edu
@@ -132,7 +174,9 @@ npm run dev
 
 Truy cập: [http://localhost:5173](http://localhost:5173)
 
-### Chạy backend mock API (ExpressJS)
+---
+
+### 2. Chạy backend (Express + MongoDB)
 
 ```bash
 cd ../mock-express-api
@@ -141,6 +185,8 @@ npm run dev
 
 Truy cập: [http://localhost:3000/api/products](http://localhost:3000/api/products)
 
+> Đảm bảo MongoDB đang chạy ở `mongodb+srv....`
+
 ---
 
 ## 📁 Cấu trúc thư mục
@@ -148,12 +194,14 @@ Truy cập: [http://localhost:3000/api/products](http://localhost:3000/api/produ
 ```
 project-root/
 ├── ecommerce-edu/         # Frontend app (React + Vite)
-└── mock-express-api/      # Backend mock API (ExpressJS)
+└── mock-express-api/      # Backend API (ExpressJS + MongoDB)
 ```
 
 ---
 
 ## 📌 Ghi chú
 
-- Đảm bảo đã cài đặt Node.js và npm.
-# hmthu2479-E-commerce-education-platform
+* Cần cài đặt MongoDB (local hoặc MongoDB Atlas).
+* Có thể sử dụng [MongoDB Compass](https://www.mongodb.com/products/compass) để kiểm tra dữ liệu.
+* Đảm bảo `.env` chứa `MONGO_URI` đúng địa chỉ DB.
+

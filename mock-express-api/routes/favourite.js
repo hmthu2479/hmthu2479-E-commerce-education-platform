@@ -1,23 +1,21 @@
 const express = require("express");
-const { getCollection, setCollection } = require("../utils/jsonDb");
-
+const favoriteModel = require("../models/favorite");
 const router = express.Router();
 
 // GET /api/favourite?userId=abc
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const { userId } = req.query;
   if (!userId) return res.status(400).json({ error: "Missing userId" });
 
-  const favorites = getCollection("favourites") || [];
+  const favorites = await favoriteModel.find({ userId });
+  const productIds = favorites.map((f) => f.productId);
 
-  const userFavorites = favorites.filter((f) => f.userId === userId);
-  res.status(200).json(userFavorites.map((f) => f.productId));
+  res.status(200).json(productIds);
 });
-
 
 // POST /api/favourite
 // body: { userId, productId }
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const { userId, productId } = req.body;
   const productIdNum = parseInt(productId, 10);
 
@@ -26,24 +24,17 @@ router.post("/", (req, res) => {
       .status(400)
       .json({ error: "Missing userId or invalid productId" });
 
-  let favourite = getCollection("favourites") || [];
+  const existing = await favoriteModel.findOne({ userId, productId: productIdNum });
 
-  const exists = favourite.find(
-    (f) => f.userId === userId && f.productId === productIdNum
-  );
-
-  if (exists) {
-    // Bỏ yêu thích
-    favourite = favourite.filter(
-      (f) => !(f.userId === userId && f.productId === productIdNum)
-    );
+  if (existing) {
+    // Nếu đã có → xóa (bỏ yêu thích)
+    await favoriteModel.deleteOne({ _id: existing._id });
+    return res.status(200).json({ message: "Removed from favorites" });
   } else {
-    // Thêm yêu thích
-    favourite.push({ userId, productId: productIdNum });
+    // Nếu chưa có → thêm
+    const newFavorite = await favoriteModel.create({ userId, productId: productIdNum });
+    return res.status(201).json(newFavorite);
   }
-
-  setCollection("favourites", favourite);
-  res.status(200).json({ success: true });
 });
 
 module.exports = router;

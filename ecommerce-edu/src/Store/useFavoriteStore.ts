@@ -17,17 +17,30 @@ export const useFavoriteStore = create<FavoriteStore>((set, get) => ({
     const data = await res.json();
     set({ favorites: data });
   },
-  toggleFavorite: async (id) => {
-    const userId = localStorage.getItem("userId");
-    if (!userId) return;
+toggleFavorite: async (id) => {
+  const userId = localStorage.getItem("userId");
+  if (!userId) return;
 
-    await fetch(`${import.meta.env.VITE_BASE_URL}/favourite/`, {
+  console.log("🔼 Toggle favorite:", { userId, productId: id });
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_BASE_URL}/favourite`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, productId: id }),
     });
 
-    get().fetchFavorites(); // Refresh list
-  },
+    const data = await res.json();
+    if (!res.ok) {
+      console.error("❌ Failed to toggle favorite:", data);
+    } else {
+      console.log("✅ Toggled favorite:", data);
+      get().fetchFavorites(); // Refresh list
+    }
+  } catch (err) {
+    console.error("❌ Network or unexpected error:", err);
+  }
+},
+
   isFavorite: (id) => get().favorites.includes(id),
 }));

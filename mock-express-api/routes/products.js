@@ -1,11 +1,11 @@
 const express = require("express");
 const { getCollection, setCollection } = require("../utils/jsonDb");
-
+const productModel = require("../models/product")
 const router = express.Router();
 
 // GET /api/products
-router.get("/", (req, res) => {
-  const products = getCollection("products");
+router.get("/", async (req, res) => {
+  const products = await productModel.find();
   const { page = "1", limit = "9" } = req.query;
   const { q, category, price_gte, price_lte } = req.query;
 
@@ -73,6 +73,18 @@ router.get("/", (req, res) => {
     // Không có page/limit → trả toàn bộ (không phân trang)
     res.status(200).json(filtered);
   }
+
 });
+// POST /api/products
+router.post("/", async (req, res) => {
+  try {
+    const data = req.body;
+    const products = await productModel.insertMany(data);
+    res.status(201).json(products);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 module.exports = router;

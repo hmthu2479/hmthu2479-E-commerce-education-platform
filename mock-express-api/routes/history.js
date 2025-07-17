@@ -1,41 +1,48 @@
 const express = require("express");
-const { getCollection, setCollection } = require("../utils/jsonDb");
+const History = require("../models/history");
 
 const router = express.Router();
 
 // GET /api/history?userId=abc
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const { userId } = req.query;
   if (!userId) return res.status(400).json({ error: "Missing userId" });
 
-  const histories = getCollection("histories") || [];
-  const userHistories = histories.filter((f) => f.userId === userId);
-  return res.status(200).json(userHistories.map((f) => f.productId));
+  try {
+    const histories = await History.find({ userId });
+    const productIds = histories.map((h) => h.productId);
+    res.status(200).json(productIds);
+  } catch (error) {
+    console.error("GET /api/history error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 // POST /api/history
 // body: { userId, productId }
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
+  console.log("🔔 Received POST /api/history body:", req.body); // ✅ log ở đây
+
   const { userId, productId } = req.body;
   const productIdNum = parseInt(productId, 10);
 
-  if (!userId || !productIdNum)
+  if (!userId || isNaN(productIdNum)) {
     return res
       .status(400)
       .json({ error: "Missing userId or invalid productId" });
-
-  let history = getCollection("histories") || [];
-
-  const exists = history.find(
-    (f) => f.userId === userId && f.productId === productIdNum
-  );
-
-  if (!exists) {
-    history.push({ userId, productId: productIdNum }); // 👈 ghi mới vào lịch sử
   }
 
-  setCollection("histories", history);
-  res.status(200).json({ success: true });
+  try {
+    const exists = await History.findOne({ userId, productId });
+    if (!exists) {
+      await History.create({ userId, productId });
+    }
+
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("❌ POST /api/history error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 

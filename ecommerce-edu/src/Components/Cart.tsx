@@ -3,11 +3,14 @@ import { Product } from "../Model/Product";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useCartStore } from "../Store/useCartStore";
 
-export interface CartItem extends Product {
-  quantity: number;
+export interface CartItem {
+  _id: string;
   userId: string;
   itemId: number;
+  quantity: number;
+  productId: Product;
 }
+
 export interface CartList extends Product {
   items: CartItem[];
   products: Product[];
@@ -22,15 +25,17 @@ const Cart = () => {
   const cartItems = useCartStore((s) => s.items);
 
   const updateCartCount = () => {
-    return cartItems.reduce(
-      (sum, item) => sum + (item.category.includes("sách") ? item.quantity : 1),
-      0
-    );
+    return cartItems.reduce((sum, item) => {
+      const category = item.productId?.category || [];
+      const isBook = category.includes("sách");
+      return sum + (isBook ? item.quantity : 1);
+    }, 0);
   };
 
   const handleQuantityChange = (id: number, change: number) => {
     const item = cartItems.find((item) => {
-      return item.id === id;
+      console.log("🚀 ~ item ~ id:", id)
+      return item.itemId === id;
     });
     console.log("🚀 ~ handleQuantityChange ~ item:", item);
     if (!item) return;
@@ -80,27 +85,27 @@ const Cart = () => {
             <ul className="space-y-3 border border-gray-200 rounded-lg p-3 divide-y divide-gray-100 bg-gray-50">
               {cartItems.map((item) => (
                 <li
-                  key={item.id}
+                  key={item.productId.id}
                   className="flex gap-3 items-center pt-2 first:pt-0"
                 >
                   <img
-                    src={item.image}
-                    alt={item.title}
+                    src={item.productId.image}
+                    alt={item.productId.title}
                     className="w-12 h-12 object-cover rounded-md"
                   />
                   <div className="flex-1">
                     <p className="text-sm font-medium text-gray-800">
-                      {item.title}
+                      {item.productId.title}
                     </p>
-                    <p className="text-sm text-gray-500">{item.author}</p>
+                    <p className="text-sm text-gray-500">{item.productId.author}</p>
                     <p className="text-xs text-gray-500">
-                      {item.price.toLocaleString()}đ
+                      {item.productId.price.toLocaleString()}đ
                     </p>
                   </div>
-                  {item.category.includes("sách") ? (
+                  {item.productId.category.includes("sách") ? (
                     <div className="flex items-center space-x-1">
                       <button
-                        onClick={() => handleQuantityChange(item.id, -1)}
+                        onClick={() => handleQuantityChange(item.productId.id, -1)}
                         className="cursor-pointer w-6 h-6 text-sm rounded-full bg-gray-200 hover:bg-gray-300"
                       >
                         -
@@ -109,7 +114,7 @@ const Cart = () => {
                         {item.quantity}
                       </span>
                       <button
-                        onClick={() => handleQuantityChange(item.id, 1)}
+                        onClick={() => handleQuantityChange(item.productId.id, 1)}
                         className="cursor-pointer w-6 h-6 text-sm rounded-full bg-gray-200 hover:bg-gray-300"
                       >
                         +
@@ -118,7 +123,7 @@ const Cart = () => {
                   ) : (
                     <div className="flex items-center space-x-1">
                       <button
-                        onClick={() => removeItem(item.id)}
+                        onClick={() => removeItem(item.productId.id)}
                         className="cursor-pointer w-6 h-6 text-sm rounded-full bg-gray-200 hover:bg-gray-300"
                       >
                         x

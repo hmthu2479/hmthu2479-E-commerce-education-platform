@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+require("dotenv").config();
+const connectDB = require("./db")
 
 const cartRoutes = require("./routes/cart");
 const favouriteRoutes = require("./routes/favourite");
@@ -11,7 +13,7 @@ const historyRoutes = require("./routes/history");
 
 const app = express();
 const PORT = 3000;
-
+connectDB();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());

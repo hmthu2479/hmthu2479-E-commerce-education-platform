@@ -29,7 +29,7 @@ const ProductCard = (product: Product) => {
   const addToCart = useCartStore((s) => s.addToCart);
   const { open, selectedProduct, handleOpen, handleClose } =
     useProductDetailModal();
-  const isInCart = useCartStore((s) => s.items.find((p) => p.id === id)); // kiểm tra có trong giỏ hàng không
+  const isInCart = useCartStore((s) => s.items.find((p) => p.itemId === id)); // kiểm tra có trong giỏ hàng không
 
   const [showSuccess, setShowSuccess] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
